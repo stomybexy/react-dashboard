@@ -1,0 +1,34 @@
+.container {
+  display: grid;
+  grid-template-columns: [grid-start sidebar-start] 22rem [sidebar-end content-start] 1fr [content-end grid-end];
+  grid-template-rows: [gird-start stats-start sidebar-start] min-content [stats-end main-start] min-content [main-end footer-start] 4rem [footer-end sidebar-end];
+  margin-top: 6rem;
+}
+
+.sidebar {
+  grid-row: sidebar-start / sidebar-end;
+  grid-column: sidebar-start / sidebar-end;
+
+  background: $color-secondary;
+}
+
+.stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  padding: 2rem;
+  grid-gap: 3rem;
+
+  .stat-graph {
+    grid-column: 1 /-1;
+  }
+
+}
+
+.main {
+  height: 60rem;
+
+}
+
+.footer {
+  background: #fff;
+}

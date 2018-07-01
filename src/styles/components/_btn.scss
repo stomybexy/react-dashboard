@@ -1,0 +1,63 @@
+.btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  border-radius: 3px;
+
+  cursor: pointer;
+  transition: all .3s;
+
+
+  &:hover {
+    opacity: .8;
+  }
+
+  &:active {
+    opacity: .6;
+  }
+
+  &:focus {
+    outline: none;
+    opacity: .8;
+  }
+
+  &--primary {
+    color: #fff;
+    background: $color-primary;
+  }
+
+  &__icon {
+    height: 1.8rem;
+    width: 1.8rem;
+    fill: currentColor;
+    backface-visibility: hidden;
+
+
+    &--sm {
+      height: 1.4rem;
+      width: 1.4rem;
+    }
+
+    &--md {
+      height: 2rem;
+      width: 2rem;
+      margin: .5rem .9rem;
+    }
+  }
+
+  &__icon + &__notification {
+    position: absolute;
+    top: -1rem;
+    right: -0.9rem;
+  }
+
+  &__icon-text {
+    font-weight: 400;
+    display: inline-block;
+  }
+
+  &__icon + &__icon-text {
+    margin-left: .8rem;
+  }
+}

@@ -1,0 +1,42 @@
+.stat {
+
+  display: grid;
+  grid-template-columns: 1fr max-content;
+
+  &--full-width {
+    grid-column: 1 / -1;
+  }
+
+  &__description {
+    grid-column: 1/1;
+
+  }
+
+  &__description,
+  &__percent {
+    align-self: start;
+    margin-top: -1rem;
+  }
+
+  &__percent {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    font-size: 1.3rem;
+    font-weight: 700;
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+
+  }
+
+  &__number {
+    font-size: 3rem;
+    font-weight: 100;
+    align-self: end;
+  }
+
+}

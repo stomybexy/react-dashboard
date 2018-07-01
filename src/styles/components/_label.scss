@@ -1,0 +1,33 @@
+.label {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2px .5rem;
+  border-radius: 3px;
+  font-size: 1.1rem;
+  color: #fff;
+  font-weight: 400;
+  line-height: 1.2;
+
+  &--primary {
+    background: $color-primary;
+  }
+
+  &--warning {
+    background: $color-warning;
+
+  }
+
+  &--primary-light {
+    background: $color-primary-light;
+  }
+
+  &--blue {
+    background: $color-blue-dark;
+  }
+
+  &--danger {
+    background: $color-danger;
+  }
+
+}
