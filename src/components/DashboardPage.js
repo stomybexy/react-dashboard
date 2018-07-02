@@ -120,7 +120,66 @@ const DashboardPage = () => (
 
             </section>
             <main className="main">
-                MAIN
+                <div className="card main__messages">
+                    <h2 className="card__title">Messages</h2>
+                    <div className="card__top-actions">
+                        <button className="btn">
+                            <svg className="btn__icon">
+                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
+                            </svg>
+                        </button>
+                        <button className="btn">
+                            <svg className="btn__icon btn__icon--sm">
+                                <use xlinkHref={`${sprite}#icon-cross`}/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div className="card">
+                    <h2 className="card__title">User project list</h2>
+                    <div className="card__top-actions">
+                        <button className="btn">
+                            <svg className="btn__icon">
+                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
+                            </svg>
+                        </button>
+                        <button className="btn">
+                            <svg className="btn__icon btn__icon--sm">
+                                <use xlinkHref={`${sprite}#icon-cross`}/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div className="card">
+                    <h2 className="card__title">Small todo list</h2>
+                    <div className="card__top-actions">
+                        <button className="btn">
+                            <svg className="btn__icon">
+                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
+                            </svg>
+                        </button>
+                        <button className="btn">
+                            <svg className="btn__icon btn__icon--sm">
+                                <use xlinkHref={`${sprite}#icon-cross`}/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div className="card main__transactions">
+                    <h2 className="card__title">Transactions worldwide</h2>
+                    <div className="card__top-actions">
+                        <button className="btn">
+                            <svg className="btn__icon">
+                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
+                            </svg>
+                        </button>
+                        <button className="btn">
+                            <svg className="btn__icon btn__icon--sm">
+                                <use xlinkHref={`${sprite}#icon-cross`}/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
             </main>
             <footer className="footer">
                 FOOTER

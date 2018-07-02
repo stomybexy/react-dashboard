@@ -29,7 +29,21 @@
 }
 
 .main {
-  height: 60rem;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, max-content);
+  grid-gap: 1.5rem;
+  padding: 2rem;
+
+  height: 50rem;
+
+  &__messages {
+    grid-row: 1 / -1;
+  }
+
+  &__transactions {
+    grid-column: 2 / 4;
+  }
 
 }
 

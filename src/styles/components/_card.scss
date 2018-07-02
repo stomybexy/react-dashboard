@@ -29,6 +29,8 @@
   }
 
   &__top-actions {
+    display: flex;
+    align-items: center;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
   }
@@ -37,5 +39,6 @@
     grid-column: 1 / -1;
     grid-row: 3;
   }
+
 
 }
