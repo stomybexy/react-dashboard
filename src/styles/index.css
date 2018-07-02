@@ -13,6 +13,9 @@
 .rotate-90 {
   transform: rotate(-90deg); }
 
+.rotate-180 {
+  transform: rotate(180deg); }
+
 *,
 *::after,
 *::before {
@@ -218,7 +221,8 @@ body {
     height: 1.8rem;
     width: 1.8rem;
     fill: currentColor;
-    backface-visibility: hidden; }
+    backface-visibility: hidden;
+    transition: all .2s; }
     .btn__icon--sm {
       height: 1.4rem;
       width: 1.4rem; }
@@ -319,7 +323,12 @@ body {
     grid-row: 1 / 1; }
   .card__content {
     grid-column: 1 / -1;
-    grid-row: 3; }
+    grid-row: 3;
+    transition: all .3s; }
+    .card__content[state="collapsed"] {
+      visibility: hidden;
+      opacity: 0;
+      height: 0; }
 
 .btn-group {
   display: flex;

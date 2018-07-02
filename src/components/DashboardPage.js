@@ -4,6 +4,7 @@ import sprite from '../img/sprite.svg';
 import StatsChart from './StatsChart';
 import ButtonGroup from './ButtonGroup';
 import StatProgress from './StatProgress';
+import Card from './Card';
 
 const DashboardPage = () => (
     <div>
@@ -14,10 +15,9 @@ const DashboardPage = () => (
             </nav>
             <section className="stats">
 
-                <div className="card">
-                    <h2 className="card__title">Income</h2>
-                    <label className="card__top-actions label label--blue">Monthly</label>
-                    <div className="card__content stat">
+                <Card title="Income">
+                    <label key="top-actions" className="label label--blue">Monthly</label>
+                    <div key="content" className="stat">
                         <span className="stat__number">40 886,200</span>
                         <span className="stat__description text-description">Total income</span>
                         <span className="stat__percent text-blue">
@@ -27,12 +27,11 @@ const DashboardPage = () => (
                             </svg>
                         </span>
                     </div>
-                </div>
+                </Card>
 
-                <div className="card">
-                    <h2 className="card__title">Orders</h2>
-                    <label className="card__top-actions label label--primary-light">Annual</label>
-                    <div className="card__content stat">
+                <Card title="Orders">
+                    <label key="top-actions" className="label label--primary-light">Annual</label>
+                    <div key="content" className="stat">
                         <span className="stat__number">275,800</span>
                         <span className="stat__description text-description">New orders</span>
                         <span className="stat__percent text-primary-light">
@@ -42,144 +41,108 @@ const DashboardPage = () => (
                             </svg>
                         </span>
                     </div>
-                </div>
+                </Card>
 
-                <div className="card">
-                    <h2 className="card__title">Visits</h2>
-                    <label className="card__top-actions label label--primary">Today</label>
-                    <div className="card__content stat">
+                <Card title="Visits">
+                    <label key="top-actions" className="label label--primary">Today</label>
+                    <div key="content" className="stat">
                         <span className="stat__number">106,120</span>
                         <span className="stat__description text-description">New visits</span>
                         <span className="stat__percent text-primary">
-                        44%
-                        <svg className="stat__icon rotate-90">
-                            <use xlinkHref={`${sprite}#icon-subdirectory_arrow_right`}/>
-                        </svg>
-                    </span>
+                            44%
+                            <svg className="stat__icon rotate-90">
+                                <use xlinkHref={`${sprite}#icon-subdirectory_arrow_right`}/>
+                            </svg>
+                        </span>
                     </div>
-                </div>
+                </Card>
 
-                <div className="card">
-                    <h2 className="card__title">User activity</h2>
-                    <label className="card__top-actions label label--danger">Low value</label>
-                    <div className="card__content stat">
+                <Card title="User activity">
+                    <label key="top-actions" className="label label--danger">Low value</label>
+                    <div key="content" className="stat">
                         <span className="stat__number">80,600</span>
                         <span className="stat__description text-description">In first month</span>
                         <span className="stat__percent text-danger">
-                        38%
-                        <svg className="stat__icon rotate-90">
-                            <use xlinkHref={`${sprite}#icon-subdirectory_arrow_left`}/>
-                        </svg>
-                    </span>
+                            38%
+                            <svg className="stat__icon rotate-90">
+                                <use xlinkHref={`${sprite}#icon-subdirectory_arrow_left`}/>
+                            </svg>
+                        </span>
                     </div>
-                </div>
-
-                <div className="card stat-graph">
-                    <h2 className="card__title">Orders</h2>
-                    <ButtonGroup
-                        className="card__top-actions"
-                        buttons={[
-                            {
-                                key: 'today',
-                                name: 'Today'
-                            }, {
-                                key: 'monthly',
-                                name: 'Monthly'
-                            }, {
-                                key: 'annual',
-                                name: 'Annual'
-                            }
-                        ]}
-                        activeBtn="today"
-                        onActiveBtnChange={activeBtn => console.log('Active button', activeBtn)}
-                    />
-                    <div className="card__content stat-graph__content">
-                        <StatsChart/>
-                        <div className="stat-progress-group">
-                            <StatProgress
-                                number="2,346"
-                                description="Total order in period"
-                                percent="48"
-                                icon="up"
-                            />
-                            <StatProgress
-                                number="4,422"
-                                description="Orders in last month"
-                                percent="60"
-                                icon="down"
-                            />
-                            <StatProgress
-                                number="9,180"
-                                description="Monthly income from orders"
-                                percent="22"
-                                icon="flash"
-                            />
+                </Card>
+                <div className="stat-graph">
+                    <Card title="Orders">
+                        <ButtonGroup
+                            key="top-actions"
+                            buttons={[
+                                {
+                                    key: 'today',
+                                    name: 'Today'
+                                }, {
+                                    key: 'monthly',
+                                    name: 'Monthly'
+                                }, {
+                                    key: 'annual',
+                                    name: 'Annual'
+                                }
+                            ]}
+                            activeBtn="today"
+                            onActiveBtnChange={activeBtn => console.log('Active button', activeBtn)}
+                        />
+                        <div key="content" className="stat-graph__content">
+                            <StatsChart/>
+                            <div className="stat-progress-group">
+                                <StatProgress
+                                    number="2,346"
+                                    description="Total order in period"
+                                    percent="48"
+                                    icon="up"
+                                />
+                                <StatProgress
+                                    number="4,422"
+                                    description="Orders in last month"
+                                    percent="60"
+                                    icon="down"
+                                />
+                                <StatProgress
+                                    number="9,180"
+                                    description="Monthly income from orders"
+                                    percent="22"
+                                    icon="flash"
+                                />
+                            </div>
                         </div>
-                    </div>
+                    </Card>
+                </div>
+            </section>
+
+            <main className="main">
+                <div className="main__messages">
+                    <Card title="Messages" closable collapsible>
+                        <div key="content" >
+                            <p>ndlkfsmldnflmqsdnfmsndf:g,n:</p>
+                            <p>ndlkfsmldnflmqsdnfmsndf:g,n:</p>
+                            <p>ndlkfsmldnflmqsdnfmsndf:g,n:</p>
+                            <p>ndlkfsmldnflmqsdnfmsndf:g,n:</p>
+                            <p>ndlkfsmldnflmqsdnfmsndf:g,n:</p>
+                        </div>
+                    </Card>
                 </div>
 
-            </section>
-            <main className="main">
-                <div className="card main__messages">
-                    <h2 className="card__title">Messages</h2>
-                    <div className="card__top-actions">
-                        <button className="btn">
-                            <svg className="btn__icon">
-                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
-                            </svg>
-                        </button>
-                        <button className="btn">
-                            <svg className="btn__icon btn__icon--sm">
-                                <use xlinkHref={`${sprite}#icon-cross`}/>
-                            </svg>
-                        </button>
-                    </div>
+                <Card title="User project list" closable collapsible>
+                    <div className="content"/>
+                </Card>
+
+                <Card title="Small todo list" closable collapsible>
+                    <div className="content"/>
+                </Card>
+
+                <div className="main__transactions" >
+                    <Card title="Transactions worldwide" closable collapsible>
+                        <div key="content"/>
+                    </Card>
                 </div>
-                <div className="card">
-                    <h2 className="card__title">User project list</h2>
-                    <div className="card__top-actions">
-                        <button className="btn">
-                            <svg className="btn__icon">
-                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
-                            </svg>
-                        </button>
-                        <button className="btn">
-                            <svg className="btn__icon btn__icon--sm">
-                                <use xlinkHref={`${sprite}#icon-cross`}/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div className="card">
-                    <h2 className="card__title">Small todo list</h2>
-                    <div className="card__top-actions">
-                        <button className="btn">
-                            <svg className="btn__icon">
-                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
-                            </svg>
-                        </button>
-                        <button className="btn">
-                            <svg className="btn__icon btn__icon--sm">
-                                <use xlinkHref={`${sprite}#icon-cross`}/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
-                <div className="card main__transactions">
-                    <h2 className="card__title">Transactions worldwide</h2>
-                    <div className="card__top-actions">
-                        <button className="btn">
-                            <svg className="btn__icon">
-                                <use xlinkHref={`${sprite}#icon-chevron-small-up`}/>
-                            </svg>
-                        </button>
-                        <button className="btn">
-                            <svg className="btn__icon btn__icon--sm">
-                                <use xlinkHref={`${sprite}#icon-cross`}/>
-                            </svg>
-                        </button>
-                    </div>
-                </div>
+
             </main>
             <footer className="footer">
                 FOOTER

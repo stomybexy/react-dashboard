@@ -33,12 +33,19 @@
     align-items: center;
     grid-column: 2 / 2;
     grid-row: 1 / 1;
+
   }
 
   &__content {
     grid-column: 1 / -1;
     grid-row: 3;
-  }
+    transition: all .3s;
 
+    &[state="collapsed"] {
+      visibility: hidden;
+      opacity: 0;
+      height: 0;
+    }
+  }
 
 }
