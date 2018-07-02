@@ -5,11 +5,11 @@
   grid-template-columns: 1fr max-content;
   grid-template-rows: 5rem min-content 1fr;
   align-items: center;
-  padding: 0 1.5rem 2rem;
+  padding: 0 1.5rem;
   color: darken($color-grey-light-1, 8%);
   box-shadow: none;
-  border: 1px solid rgba($color-grey-light-1, .1);
-  border-top: 2px solid rgba($color-grey-light-1, .2);
+  border: $border-light-1;
+  border-top: $border-light-2;
 
   &::after {
     content: "";

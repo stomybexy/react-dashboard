@@ -1,0 +1,46 @@
+.stat-progress-group {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  padding: 1.5rem 0;
+}
+
+.stat-progress {
+  display: grid;
+  grid-template-columns: 1fr max-content;
+  grid-row-gap: .5rem;
+
+  &:not(:first-child) {
+    padding-top: 1rem;
+  }
+
+  &__number {
+    font-size: 2.5rem;
+    font-weight: 100;
+    align-self: end;
+    margin-bottom: -1rem;
+  }
+
+  &__description  {
+    grid-column: 1 / 1;
+  }
+
+  &__percent {
+    display: flex;
+    align-items: center;
+    justify-self: end;
+    font-size: 1.3rem;
+    font-weight: 700;
+
+  }
+
+  &__icon {
+    width: 1.5rem;
+    height: 1.5rem;
+    fill: currentColor;
+  }
+
+  &__progress {
+    grid-column: 1 / -1;
+  }
+}

@@ -1,3 +1,13 @@
 .stat-graph {
 
+  &__content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+
+    @media only screen and (max-width: $bp-l) {
+      grid-template-columns: 1fr;
+    }
+
+  }
 }
+

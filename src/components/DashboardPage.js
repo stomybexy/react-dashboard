@@ -1,6 +1,9 @@
 import React from 'react';
 import Header from './Header';
 import sprite from '../img/sprite.svg';
+import StatsChart from './StatsChart';
+import ButtonGroup from './ButtonGroup';
+import StatProgress from './StatProgress';
 
 const DashboardPage = () => (
     <div>
@@ -73,6 +76,46 @@ const DashboardPage = () => (
 
                 <div className="card stat-graph">
                     <h2 className="card__title">Orders</h2>
+                    <ButtonGroup
+                        className="card__top-actions"
+                        buttons={[
+                            {
+                                key: 'today',
+                                name: 'Today'
+                            }, {
+                                key: 'monthly',
+                                name: 'Monthly'
+                            }, {
+                                key: 'annual',
+                                name: 'Annual'
+                            }
+                        ]}
+                        activeBtn="today"
+                        onActiveBtnChange={activeBtn => console.log('Active button', activeBtn)}
+                    />
+                    <div className="card__content stat-graph__content">
+                        <StatsChart/>
+                        <div className="stat-progress-group">
+                            <StatProgress
+                                number="2,346"
+                                description="Total order in period"
+                                percent="48"
+                                icon="up"
+                            />
+                            <StatProgress
+                                number="4,422"
+                                description="Orders in last month"
+                                percent="60"
+                                icon="down"
+                            />
+                            <StatProgress
+                                number="9,180"
+                                description="Monthly income from orders"
+                                percent="22"
+                                icon="flash"
+                            />
+                        </div>
+                    </div>
                 </div>
 
             </section>

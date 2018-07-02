@@ -1,0 +1,39 @@
+.btn-group {
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+
+  &__btn {
+    font-size: 1.2rem;
+    font-weight: 400;
+    padding: .3rem 1rem;
+    cursor: pointer;
+    border: 1px solid rgba($color-grey-light-1, .2);
+    outline: none;
+    box-shadow: 0 0 2px rgba(0,0,0, .2);
+    transition: all .2s;
+
+    &:not(:last-child) {
+      border-right: none;
+    }
+
+    &:first-child {
+      border-radius: 3px 0 0 3px;
+    }
+
+    &:last-child {
+      border-radius: 0 3px 3px 0;
+    }
+
+    &:hover {
+      background: radial-gradient(#fff,rgba(0,0,0, .2));
+    }
+    &:active,
+    &--active{
+      box-shadow: none;
+      background: radial-gradient(#fff,rgba(0,0,0, .2));
+    }
+  }
+}

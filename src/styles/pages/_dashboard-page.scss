@@ -18,6 +18,10 @@
   padding: 2rem;
   grid-gap: 3rem;
 
+  @media only screen and (min-width: $bp-xl) {
+    grid-template-columns: repeat(4, minmax(25rem, 1fr));
+  }
+
   .stat-graph {
     grid-column: 1 /-1;
   }

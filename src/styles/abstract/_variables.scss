@@ -8,3 +8,11 @@ $color-warning: #f8ac59;
 $color-danger: #ff5359;
 $color-blue-dark: #1c84c6;
 $bg-color: #f8f8f8;
+
+$border-light-1: 1px solid rgba($color-grey-light-1, .1);
+$border-light-2: 2px solid rgba($color-grey-light-1, .2);
+
+// RESPONSIVE BREAKPOINTS
+$bp-l: 75em; //(* 16px) 1200px
+$bp-xl: 93.75em; //(* 16px) 1500px
+$bp-xxl: 106.25em; //(* 16px) 1700px

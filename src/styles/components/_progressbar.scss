@@ -1,0 +1,18 @@
+.progressbar {
+  padding: 2px 0;
+  border-radius: 2px;
+  border: $border-light-1;
+  background: $bg-color;
+  overflow: hidden;
+
+  &--22  {
+    background: linear-gradient(to right, $color-primary 0%, $color-primary 22%, $bg-color 22%);
+  }
+  &--48 {
+    background: linear-gradient(to right, $color-primary 0%, $color-primary 48%, $bg-color 48%);
+  }
+
+  &--60  {
+    background: linear-gradient(to right, $color-primary 0%, $color-primary 60%, $bg-color 60%);
+  }
+}
